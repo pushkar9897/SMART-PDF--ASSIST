@@ -17,6 +17,7 @@ Document Upload → Text Extraction → Vector Embedding → Gemini LLM → Stre
 
 Key Components:
         backend/ – FastAPI backend and core logic
+        
             main.py – FastAPI server
             config.py – Environment configuration
             document_processor.py – PDF / TXT handling
