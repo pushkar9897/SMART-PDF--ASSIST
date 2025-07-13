@@ -86,8 +86,7 @@ smart-pdf-assist/
 
 YOUTUBE VEDIO LINK :
 
-📽️ [**2-min Loom video:** _(link will be inserted after recording)_  
-_Covering:_ upload ➜ ask ➜ challenge ➜ evaluate](https://youtu.be/atp32C8qG8A)
+📽️ [Link](https://youtu.be/atp32C8qG8A)
 
 ---
 
