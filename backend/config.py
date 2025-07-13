@@ -2,7 +2,7 @@
 # from dotenv import load_dotenv
 
 # load_dotenv()
-# GEMINI_KEY = os.getenv("AIzaSyBIUsa9x28jX0mC21dUxENxR-d-qMtID80")
+# GEMINI_KEY = os.getenv("")
 
 
 import os
