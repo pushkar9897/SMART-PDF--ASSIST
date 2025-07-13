@@ -13,19 +13,16 @@ Turn any **PDF or TXT into an interactive study partner** in under 2 minutes.
 
 ## 🏗️ ARCHITECTURE & REASONING FLOW
 
-```mermaid
 graph TD
-    A[User uploads PDF/TXT<br>(Streamlit)] -->|file bytes| B[FastAPI /upload]
-    B --> C[doc_processor.py<br>- extracts text<br>- builds FAISS index]
+    A[User uploads PDF/TXT (Streamlit)] -->|file bytes| B[FastAPI /upload]
+    B --> C[doc_processor.py - extracts text - builds FAISS index]
     C --> D[Local FAISS Vector Store]
-    D --> E[User asks question<br>(Streamlit)]
+    D --> E[User asks question (Streamlit)]
     E -->|QuestionRequest| F[FastAPI /ask]
-    F --> G[llm_service.py<br>- similarity search<br>- Gemini context injection]
-    G --> H[Answer + citations<br>returned to Streamlit]
+    F --> G[llm_service.py - similarity search - Gemini context injection]
+    G --> H[Answer + citations returned to Streamlit]
     I[Challenge Me] -->|/challenges| G
     J[Evaluate Answer] -->|/evaluate| G
-```
-
 ---
 
 ## ⚙️ SETUP INSTRUCTIONS
