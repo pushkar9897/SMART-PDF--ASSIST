@@ -13,23 +13,23 @@ Turn any **PDF or TXT into an interactive study partner** in under 2 minutes.
 
 ## 🏗️ ARCHITECTURE & REASONING FLOW
 
-graph TD
-    A[User uploads PDF/TXT (Streamlit)] -->|file bytes| B[FastAPI /upload]
-    B --> C[doc_processor.py - extracts text - builds FAISS index]
-    C --> D[Local FAISS Vector Store]
-    D --> E[User asks question (Streamlit)]
-    E -->|QuestionRequest| F[FastAPI /ask]
-    F --> G[llm_service.py - similarity search - Gemini context injection]
-    G --> H[Answer + citations returned to Streamlit]
-    I[Challenge Me] -->|/challenges| G
-    J[Evaluate Answer] -->|/evaluate| G
+Document Upload → Text Extraction → Vector Embedding → Gemini LLM → Streamlit UI
+        Key Components:
+        backend/ – FastAPI backend and core logic
+            main.py – FastAPI server
+            config.py – Environment configuration
+            document_processor.py – PDF / TXT handling
+            llm_service.py – Gemini API logic
+            api_models.py – Request / response models
+        frontend/ – Streamlit frontend
+            app.py – Main UI logic
 ---
 
 ## ⚙️ SETUP INSTRUCTIONS
 
 ### 1️⃣ CLONE & ENTER REPO
 ```bash
-git clone https://github.com/pushkar9897/smart-pdf-assist.git
+git clone https://github.com/pushkar9897/smart-pdf--assist.git
 cd smart-pdf-assist
 ```
 
