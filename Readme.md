@@ -14,7 +14,8 @@ Turn any **PDF or TXT into an interactive study partner** in under 2 minutes.
 ## 🏗️ ARCHITECTURE & REASONING FLOW
 
 Document Upload → Text Extraction → Vector Embedding → Gemini LLM → Streamlit UI
-        Key Components:
+
+Key Components:
         backend/ – FastAPI backend and core logic
             main.py – FastAPI server
             config.py – Environment configuration
